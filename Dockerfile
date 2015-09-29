@@ -15,12 +15,14 @@ RUN apt-get update && \
 
 RUN mkdir -p /config && \
     mkdir -p /volumes/incomplete && \
-    mkdir -p /volumes/complete
+    mkdir -p /volumes/complete && \
+    mkdir -p /volumes/watch
 
 EXPOSE 8080
 
 VOLUME ["/config"]
 VOLUME ["/volumes/incomplete"]
 VOLUME ["/volumes/complete"]
+VOLUME ["/volumes/watch"]
 
 CMD ["/usr/bin/sabnzbdplus","--config-file","/config","--server",":8080","--console"]
