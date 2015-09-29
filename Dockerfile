@@ -3,8 +3,10 @@ FROM ubuntu:trusty
 MAINTAINER connorxxl <christian.flaig@gmail.com>
 
 RUN apt-get update && \
+    apt-add-repository -y multiverse && \
+    apt-get update && \
     apt-get install -y curl python-software-properties software-properties-common supervisor ca-certificates procps unrar && \
-    add-apt-repository -y  ppa:jcfp/ppa && \
+    apt-add-repository -y  ppa:jcfp/ppa && \
     apt-get -q update && \
     apt-get install -y \
       sabnzbdplus sabnzbdplus-theme-classic sabnzbdplus-theme-mobile sabnzbdplus-theme-plush \
