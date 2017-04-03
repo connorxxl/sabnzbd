@@ -2,14 +2,17 @@ FROM ubuntu:xenial
 
 MAINTAINER connorxxl <christian.flaig@gmail.com>
 
-RUN apt-get update && \
-    apt-get install -y curl python-software-properties software-properties-common supervisor ca-certificates procps && \
+RUN apt update && \
+    apt full-upgrade -y && \
+    apt install -y curl python-software-properties software-properties-common supervisor ca-certificates procps && \
     apt-add-repository -y multiverse && \
     add-apt-repository -y ppa:jcfp/ppa && \
-    apt-get update && \
-    apt-get install -y sabnzbdplus && \
-    apt-get install -y par2 python-yenc unzip unrar && \
-    apt-get -y autoremove && \
+    add-apt-repository -y ppa:jcfp/sab-addons && \
+    apt update && \
+    apt install -y sabnzbdplus && \
+    apt install -y python-yenc unzip unrar && \
+    apt install -y par2-tbb && \
+    apt -y autoremove && \
     apt-get -y clean
 
 RUN mkdir -p /config && \
