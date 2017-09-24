@@ -27,4 +27,4 @@ VOLUME ["/volumes/incomplete"]
 VOLUME ["/volumes/complete"]
 VOLUME ["/volumes/watch"]
 
-CMD ["/usr/bin/sabnzbdplus","--config-file","/config","--server",":8080","--console"]
+CMD ["/usr/bin/sabnzbdplus","--config-file","/config","--server",":8080","--logging","1"]
