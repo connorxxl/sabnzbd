@@ -10,7 +10,7 @@ RUN apt update && \
     add-apt-repository -y ppa:jcfp/sab-addons && \
     apt update && \
     apt install -y sabnzbdplus && \
-    apt install -y python-yenc unzip unrar && \
+    apt install -y python-sabyenc unzip unrar && \
     apt install -y par2-tbb && \
     apt -y autoremove && \
     apt-get -y clean
