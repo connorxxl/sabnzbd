@@ -1,5 +1,7 @@
 FROM ubuntu:xenial
 
+ENV LANG en_US.UTF-8
+
 MAINTAINER connorxxl <christian.flaig@gmail.com>
 
 RUN apt update && \
