@@ -8,7 +8,7 @@ MAINTAINER connorxxl <christian.flaig@gmail.com>
 
 RUN apt update && \
     apt full-upgrade -y && \
-    apt install -y curl python-software-properties software-properties-common supervisor ca-certificates procps && \
+    apt install -y curl software-properties-common supervisor ca-certificates procps && \
     apt-add-repository -y multiverse && \
     add-apt-repository -y ppa:jcfp/ppa && \
     add-apt-repository -y ppa:jcfp/sab-addons && \
